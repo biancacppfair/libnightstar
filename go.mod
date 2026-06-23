@@ -1,3 +1,3 @@
-module job_scheduler_b7ed8a
+module job_scheduler_179773
 
 go 1.22
